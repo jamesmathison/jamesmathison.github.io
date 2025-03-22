@@ -1,2 +1,2 @@
 # blog
-James Mathison's Blog
+James Mathison's Default Blog
