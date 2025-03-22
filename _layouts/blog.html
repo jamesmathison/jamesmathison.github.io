@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="home">
+
+    <h1>{{ page.display-title }}</h1>
+
+    <p>I write about how to thrive. I explore the mechanics of soul, psyche, and skill. </p>
+    
+    <p>Who am I to talk about such things? I'm a wretched slice of infinite potential. And so are you.</p>
+
+    <p>Below is the public archive. To have them sent to your email address, <b><a href="http://eepurl.com/c43wr5" target="_blank">sign up here</a>.</b> </p>
+    
+    &nbsp;
+    
+    &nbsp;
+    
+  {{ content }}
+    
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+          <hr color="#d3d3d3">
+          &nbsp;
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}"><b>{{ post.title | escape }}</b></a>
+        </h2>
+          <!-- <p align="right"><span class="post-meta">{{ post.tags }}</span></p> -->
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>
+
+<!-- Removed  class="page-heading"  from h1  (2017-04-06) -->
